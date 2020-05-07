@@ -1,0 +1,13 @@
+{
+    "host": "127.0.0.1",
+    "port": 8080,
+    "superusers": [
+        123456789
+    ],
+    "command_start": [
+        "/", "!", "！", "／"
+    ],
+    "enable_groups": [],
+    "ban_users": [],
+    "enable_plugins": []
+}
