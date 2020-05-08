@@ -1,13 +1,24 @@
-import nonebot
-import config
-from config import getJson
-from os import path
+import os
+import sys
 
+import nonebot
+
+import init
+
+
+nonebot.init(init)
+init.enable_plugins()
+nonebot.load_plugins(
+    os.path.join(os.path.dirname(__file__), 'enabled', 'plugins'),
+    'enabled.plugins'
+)
+enable_groups = init.getJson("enable_groups")
+ban_users = init.getJson("ban_users")
+bot = nonebot.get_bot()
+app = bot.asgi
 
 if __name__ == '__main__':
-    nonebot.init(config)
-    nonebot.load_plugins(
-        path.join(path.dirname(__file__), 'enabled', 'plugins'),
-        'enabled.plugins'
-    )
-    nonebot.run()
+    bot.run()
+
+
+# pm2 start main.py -x --interpreter python --name mxbot

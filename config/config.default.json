@@ -1,13 +1,19 @@
 {
     "host": "127.0.0.1",
     "port": 8080,
+    "debug": "False",
     "superusers": [
         123456789
     ],
     "command_start": [
         "/", "!", "！", "／"
     ],
+    "session_cancel_expression": [
+        "好的"
+    ],
+    "enable_plugins": [
+        "basic.py"
+    ],
     "enable_groups": [],
-    "ban_users": [],
-    "enable_plugins": []
+    "ban_users": []
 }
